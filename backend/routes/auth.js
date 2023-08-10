@@ -1,12 +1,11 @@
 import express from "express";
 import USER from "../models/model.js";
+
 const router = express.Router()
-
-
 
 //APIs
 
-//--- GET 1 record ---
+//--- Get single record ---
 router.get("/user/:userId", (req, res) => {
     const userId = req.params.userId;
 
@@ -25,7 +24,7 @@ router.get("/user/:userId", (req, res) => {
         });
 });
 
-//--- GET all records ---
+//--- Get all records ---
 router.get("/user", (req, res) => {
     USER.find()
         .then(users => {

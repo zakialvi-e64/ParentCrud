@@ -14,6 +14,7 @@ app.use(express.json())
 app.use("/auth",authRoute)
 
 
+
 //MongoDB Connection
 
 mongoose.connect(MONGO_URL)
